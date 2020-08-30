@@ -4,7 +4,7 @@ from pdf_parser import PDFP
 if __name__=="__main__":
     print('here we go')
     cwd = os.getcwd()
-    document = PDFP(cwd, 'otake-hideo-opening-theory-made-easy.pdf')
+    document = PDFP(cwd, 'Toshiro Kageyama - Lessons in the Fundamentals of Go.pdf')
     page_num = 0
     for page in document.pages:
         print(page_num)
