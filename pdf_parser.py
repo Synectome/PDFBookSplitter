@@ -5,11 +5,11 @@ from PIL import Image
 
 
 class PDFP:
-    def __init__(self, root, pdf_name):
-        self.pdf_directory = os.path.join(root, 'pdfs')
-        self.img_directory = os.path.join(root, 'images')
-        self.old_pdf_name = os.path.join(self.pdf_directory, pdf_name)
-        self.new_pdf_name = os.path.join(self.pdf_directory, pdf_name[:-4] + "-corrected.pdf")
+    def __init__(self, pdf_name):
+        # self.pdf_directory = os.path.join(root, 'pdfs')
+        # self.img_directory = os.path.join(root, 'images')
+        self.old_pdf_name = os.path.join(pdf_name)
+        self.new_pdf_name = os.path.join(pdf_name[:-4] + "-corrected.pdf")
         self.pages = convert_from_path(self.old_pdf_name)
         self.cropped_pages_as_imgs = []
 
